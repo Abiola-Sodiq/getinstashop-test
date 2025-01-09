@@ -29,7 +29,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div className=" w-full h-full px-[32px] space-y-40">
+    <div className=" w-full px-[32px] space-y-40">
       <div className=" space-y-6">
         <div>
           <Image src={shopingSale} alt="Shopping Sale Image" />
@@ -55,7 +55,7 @@ const Homepage = () => {
           variant="primary"
           text="Get started"
           onClick={() => {
-            router.push("/auth/sign-up");
+            router.push("/sign-up");
           }}
         />
       </div>

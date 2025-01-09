@@ -1,4 +1,10 @@
-const ArrowBack = () => {
+const ArrowBack = ({
+  onClick,
+  className,
+}: {
+  onClick: () => void;
+  className: string;
+}) => {
   return (
     <svg
       width="21"
@@ -6,6 +12,8 @@ const ArrowBack = () => {
       viewBox="0 0 21 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className}
     >
       <mask
         id="mask0_1705_1119"

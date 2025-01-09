@@ -33,7 +33,7 @@ export default function RootLayout({
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
         />
         <Toaster richColors pauseWhenPageIsHidden position="top-right" />
-        <main className="mx-auto w-full max-w-[360px] h-[100svh] border-4 py-[92px]">
+        <main className="mx-auto w-full max-w-[360px] border-4 py-7">
           {children}
         </main>
       </body>
