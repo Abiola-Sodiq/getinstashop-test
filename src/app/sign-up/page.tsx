@@ -5,8 +5,8 @@ import CustomButton from "@/components/CustomButton";
 import StepIndicator from "@/components/StepIndicator";
 import StoreSetup from "@/components/StoreSetup";
 import Verification from "@/components/Verification";
+import useStore from "@/store";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 const Signup = () => {
   const router = useRouter();
@@ -15,8 +15,7 @@ const Signup = () => {
     { step: <ProfileSetup /> },
     { step: <StoreSetup /> },
   ];
-  const [currentStep, setCurrentStep] = useState(0);
-
+  const { currentStep, setCurrentStep } = useStore();
   const handleNextStep = () => {
     if (currentStep < Steps.length - 1) {
       setCurrentStep(currentStep + 1);
@@ -24,6 +23,7 @@ const Signup = () => {
       router.push("/create-product");
     }
   };
+  console.log(currentStep);
   const handleBack = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
